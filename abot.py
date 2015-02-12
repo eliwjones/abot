@@ -61,10 +61,12 @@ class ABot(sleekxmpp.ClientXMPP):
         print str(msg)
         mid = None
         try:
+            # hipchat uses 'mid'
             mid = message[0].attributes['mid'].value
         except:
+            # slack uses 'id'
             mid = message[0].attributes['id'].value
-        
+
         if mid is None:
             print "Could not find 'mid' in attributes"
             return
