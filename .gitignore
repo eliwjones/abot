@@ -1,0 +1,5 @@
+conf.py
+*.pyc
+.project
+.pydevproject
+venv
